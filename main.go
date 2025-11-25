@@ -40,6 +40,9 @@ func main() {
 	// Manual Mapping Endpoint
 	api.Post("/transactions/map", handlers.RemapTransaction)
 
+	// AI Analysis Endpoint
+	api.Get("/analyze", handlers.AnalyzeUncategorized)
+
 	// Start Server
 	port := os.Getenv("PORT")
 	if port == "" {
